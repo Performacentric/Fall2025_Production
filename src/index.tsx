@@ -11,6 +11,7 @@ import { ImproveEmployeePerformance } from "./screens/ImproveEmployeePerformance
 import { ImproveSupplierPerformance } from "./screens/ImproveSupplierPerformance";
 import { ImproveEfficiency } from "./screens/ImproveEfficiency";
 import { ImproveDataVisibility } from "./screens/ImproveDataVisibility";
+import { Banking } from "./screens/Banking";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/improve-supplier-performance" element={<ImproveSupplierPerformance />} />
         <Route path="/improve-efficiency" element={<ImproveEfficiency />} />
         <Route path="/improve-data-visibility" element={<ImproveDataVisibility />} />
+        <Route path="/banking" element={<Banking />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
