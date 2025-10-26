@@ -18,6 +18,7 @@ import { ImproveProfitability } from "./screens/ImproveProfitability";
 import { WhatWeDo } from "./screens/WhatWeDo";
 import { Industries } from "./screens/Industries";
 import { RequestDemo } from "./screens/RequestDemo";
+import { Contact } from "./screens/Contact";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -39,6 +40,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/request-a-demo" element={<RequestDemo />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
