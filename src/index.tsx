@@ -9,6 +9,7 @@ import { RequestDemo } from "./screens/RequestDemo";
 import { ImproveCustomerSatisfaction } from "./screens/ImproveCustomerSatisfaction";
 import { ImproveEmployeePerformance } from "./screens/ImproveEmployeePerformance";
 import { ImproveSupplierPerformance } from "./screens/ImproveSupplierPerformance";
+import { ImproveEfficiency } from "./screens/ImproveEfficiency";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/improve-customer-satisfaction" element={<ImproveCustomerSatisfaction />} />
         <Route path="/improve-employee-performance" element={<ImproveEmployeePerformance />} />
         <Route path="/improve-supplier-performance" element={<ImproveSupplierPerformance />} />
+        <Route path="/improve-efficiency" element={<ImproveEfficiency />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
