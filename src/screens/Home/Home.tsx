@@ -261,7 +261,7 @@ export const Home: React.FC = () => {
               <img
                 className="w-[200px] h-[120px] object-contain"
                 alt="Logo"
-                src="/logo-1.png"
+                src="/Transparent Logo.png"
               />
               <Button
                 onClick={() => navigate('/request-a-demo')}
