@@ -7,6 +7,7 @@ import { ImproveEmployeePerformance } from "./screens/ImproveEmployeePerformance
 import { ImproveSupplierPerformance } from "./screens/ImproveSupplierPerformance";
 import { ImproveEfficiency } from "./screens/ImproveEfficiency";
 import { ImproveDataVisibility } from "./screens/ImproveDataVisibility";
+import { ImproveCustomerSatisfaction } from "./screens/ImproveCustomerSatisfaction";
 import { Banking } from "./screens/Banking";
 import { BusinessServices } from "./screens/BusinessServices";
 
@@ -19,6 +20,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/improve-supplier-performance" element={<ImproveSupplierPerformance />} />
         <Route path="/improve-efficiency" element={<ImproveEfficiency />} />
         <Route path="/improve-data-visibility" element={<ImproveDataVisibility />} />
+        <Route path="/improve-customer-satisfaction" element={<ImproveCustomerSatisfaction />} />
         <Route path="/banking" element={<Banking />} />
         <Route path="/business-services" element={<BusinessServices />} />
       </Routes>
