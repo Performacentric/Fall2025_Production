@@ -11,6 +11,7 @@ import { ImproveCustomerSatisfaction } from "./screens/ImproveCustomerSatisfacti
 import { Banking } from "./screens/Banking";
 import { BusinessServices } from "./screens/BusinessServices";
 import { Pricing } from "./screens/Pricing";
+import { Distribution } from "./screens/Distribution";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/banking" element={<Banking />} />
         <Route path="/business-services" element={<BusinessServices />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/distribution" element={<Distribution />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
