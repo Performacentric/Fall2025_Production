@@ -211,7 +211,7 @@ export const ImproveEmployeePerformance: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8">
             <div className="flex flex-col items-center md:items-start gap-6">
               <img
-                className="w-[200px] h-[120px] object-contain"
+                className="h-12 object-contain"
                 alt="Logo"
                 src="/Transparent Logo.png"
               />
