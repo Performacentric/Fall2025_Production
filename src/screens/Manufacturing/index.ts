@@ -1,0 +1,1 @@
+export { Manufacturing } from './Manufacturing';
