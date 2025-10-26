@@ -204,7 +204,7 @@ export const ImproveEmployeePerformance: React.FC = () => {
         </div>
       </section>
 
-      <footer className="w-full py-12 px-4 bg-white">
+      <footer className="w-full py-12 px-4 bg-[#f5f5f5]">
         <Separator className="mb-12" />
 
         <div className="max-w-6xl mx-auto">
@@ -213,7 +213,7 @@ export const ImproveEmployeePerformance: React.FC = () => {
               <img
                 className="w-[200px] h-[120px] object-contain"
                 alt="Logo"
-                src="/logo-1.png"
+                src="/Transparent Logo.png"
               />
               <Button
                 onClick={() => navigate('/request-a-demo')}
