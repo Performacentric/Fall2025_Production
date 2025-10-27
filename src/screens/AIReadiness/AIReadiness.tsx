@@ -351,7 +351,7 @@ export const AIReadiness: React.FC = () => {
               disabled={isSubmitting}
               className="w-full bg-[#076476] hover:bg-[#065a6a] text-white font-bold text-lg rounded-md h-14 disabled:opacity-50 disabled:cursor-not-allowed [font-family:'Manrope',Helvetica] transition-all"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit Registration'}
+              {isSubmitting ? 'Submitting...' : 'Schedule Workshop'}
             </Button>
           </div>
         </form>
