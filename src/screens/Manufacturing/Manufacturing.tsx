@@ -251,7 +251,7 @@ export const Manufacturing: React.FC = () => {
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#555555] [font-family:'Manrope',Helvetica]">
           <p>
-            Copyright © 2025 Performacentric, Incorporated
+            Copyright © 2026 Performacentric, Incorporated
             <br className="md:hidden" /> All Rights Reserved
           </p>
           <div className="flex gap-6">
