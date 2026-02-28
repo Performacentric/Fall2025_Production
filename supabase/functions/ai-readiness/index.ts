@@ -105,9 +105,39 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    const resendApiKey = Deno.env.get('RESEND_API_KEY');
+    if (resendApiKey) {
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${resendApiKey}`,
+          },
+          body: JSON.stringify({
+            from: 'AI Readiness <onboarding@resend.dev>',
+            to: 'info@performacentric.com',
+            subject: `New AI Readiness Request from ${body.company_name}`,
+            html: `
+              <h2>New AI Readiness Assessment Request</h2>
+              <p><strong>Name:</strong> ${body.first_name} ${body.last_name}</p>
+              <p><strong>Email:</strong> ${body.business_email}</p>
+              <p><strong>Company:</strong> ${body.company_name}</p>
+              <p><strong>Primary Interest:</strong> ${body.primary_interest.join(', ')}</p>
+              ${body.message ? `<p><strong>Message:</strong> ${body.message}</p>` : ''}
+              <p><strong>Campaign Source:</strong> ${body.campaign_source || 'direct'}</p>
+              ${body.heard_about_us ? `<p><strong>Heard About Us:</strong> ${body.heard_about_us}</p>` : ''}
+            `,
+          }),
+        });
+      } catch (emailError) {
+        console.error('Email sending error:', emailError);
+      }
+    }
+
     try {
       const leadsApiKey = Deno.env.get('PERFORMACENTRIC_LEADS_KEY');
-      
+
       if (leadsApiKey) {
         const leadsPayload = {
           first_name: body.first_name,

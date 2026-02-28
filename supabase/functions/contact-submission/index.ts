@@ -80,6 +80,31 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    const resendApiKey = Deno.env.get('RESEND_API_KEY');
+    if (resendApiKey) {
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${resendApiKey}`,
+          },
+          body: JSON.stringify({
+            from: 'Contact Form <onboarding@resend.dev>',
+            to: 'info@performacentric.com',
+            subject: `New Contact Submission from ${body.first_name} ${body.last_name}`,
+            html: `
+              <h2>New Contact Submission</h2>
+              <p><strong>Name:</strong> ${body.first_name} ${body.last_name}</p>
+              <p><strong>Email:</strong> ${body.email}</p>
+            `,
+          }),
+        });
+      } catch (emailError) {
+        console.error('Email sending error:', emailError);
+      }
+    }
+
     return new Response(
       JSON.stringify({ success: true }),
       {
