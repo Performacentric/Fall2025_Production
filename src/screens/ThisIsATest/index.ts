@@ -1,1 +1,0 @@
-export { ThisIsATest } from './ThisIsATest';

@@ -22,7 +22,6 @@ import { Contact } from "./screens/Contact";
 import { AIReadiness } from "./screens/AIReadiness";
 import { Privacy } from "./screens/Privacy";
 import { Resources } from "./screens/Resources";
-import { ThisIsATest } from "./screens/ThisIsATest";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -48,7 +47,6 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/ai-readiness" element={<AIReadiness />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/this-is-a-test" element={<ThisIsATest />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
